@@ -1,0 +1,22 @@
+MI GYM 90 — VERSIÓN 4 PROFESIONAL
+
+Reemplaza en el repositorio:
+- index.html
+- manifest.json
+- sw.js
+
+Conserva icon-180.png e icon.svg si ya están en el repositorio.
+
+Novedades:
+- Título corregido.
+- Guía visual más limpia.
+- Posición inicial y final.
+- Movimiento controlado.
+- Músculos trabajados.
+- Indicaciones de posición inicial.
+- Errores que debes evitar.
+- Identificación/ajuste de la máquina.
+- Guía rápida desplegable.
+- Progreso por día.
+- Temporizador.
+- Caché v4 para forzar actualización.
