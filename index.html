@@ -4,54 +4,43 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#111827">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Mi Gym 90">
-<link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="icon-180.png">
-<title>Mi Gym 90</title>
+<title>Mi Gym 90 · Ilustrado</title>
 <style>
-:root{--bg:#f3f4f6;--card:#fff;--ink:#111827;--muted:#64748b;--accent:#16a34a;--yellow:#facc15;--line:#e5e7eb;--dark:#111827;--red:#dc2626}
-*{box-sizing:border-box}html{background:var(--bg)}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
-header{background:linear-gradient(135deg,#111827,#1f2937);color:white;padding:18px 16px calc(16px + env(safe-area-inset-top));position:sticky;top:0;z-index:5}
-.head{max-width:720px;margin:auto;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px}.logo{width:43px;height:43px;border-radius:12px;background:#facc15;color:#111827;display:grid;place-items:center;font-weight:900;font-size:17px}.brand h1{margin:0;font-size:23px}.brand p{margin:2px 0 0;color:#cbd5e1;font-size:12px}
-main{max-width:720px;margin:auto;padding:14px 14px 90px}.tabs{display:flex;gap:7px;overflow:auto;padding-bottom:3px}.tab{border:0;background:#fff;color:#334155;border-radius:999px;padding:10px 14px;font-weight:800;white-space:nowrap}.tab.active{background:var(--accent);color:white}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px;margin:12px 0;box-shadow:0 3px 14px #00000009}.hero{background:var(--dark);color:white}.hero h2{margin:0 0 5px}.hero p{margin:0;color:#cbd5e1;font-size:13px}.goal{display:flex;justify-content:space-between;margin-top:13px;font-weight:800}.progress{height:9px;background:#374151;border-radius:99px;overflow:hidden;margin-top:7px}.bar{height:100%;background:var(--yellow);width:0}
-.exercise{border-top:1px solid var(--line);padding:15px 0}.exercise:first-child{border-top:0}.title{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.title h3{margin:0;font-size:17px}.sets{font-size:13px;font-weight:800;white-space:nowrap}.figure{background:#f8fafc;border-radius:14px;margin-top:10px;padding:7px}.caption{display:flex;justify-content:space-around;color:#475569;font-size:10px;font-weight:900;margin-top:-2px}.note{font-size:12px;color:var(--muted);margin:8px 0}.action{border:1px solid #d1d5db;background:white;border-radius:10px;padding:9px 10px;font-weight:800}.action.done{background:#dcfce7;border-color:#86efac;color:#166534}
-.timer{background:#111827;color:#fff;border-radius:16px;padding:12px;text-align:center;margin-top:12px}.timer span{display:block;font-size:30px;font-weight:900}.timer button{border:0;border-radius:9px;padding:7px 11px;margin:3px;font-weight:800}
-.small{font-size:12px;color:var(--muted)}.safety{background:#fff7ed;border-color:#fed7aa}.safety b{color:#9a3412}.row{display:flex;justify-content:space-between;gap:8px;align-items:center}.history{font-size:13px}.pill{background:#dcfce7;color:#166534;border-radius:99px;padding:5px 8px;font-size:11px;font-weight:800}
-footer{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom));text-align:center;color:#64748b;font-size:11px}
-svg{width:100%;height:175px}
-.machine{stroke:#334155;stroke-width:7;stroke-linecap:round;fill:none}.person{stroke:#111827;stroke-width:8;stroke-linecap:round;fill:none}
+*{box-sizing:border-box}body{margin:0;background:#f3f4f6;color:#111827;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{background:#111827;color:white;padding:18px 16px;position:sticky;top:0;z-index:3}h1{margin:0;font-size:24px}header p{margin:4px 0 0;color:#cbd5e1;font-size:13px}
+main{max-width:720px;margin:auto;padding:14px 14px 90px}.tabs{display:flex;gap:7px;overflow:auto;margin-bottom:12px}.tab{border:0;background:#fff;border-radius:999px;padding:10px 14px;font-weight:700;white-space:nowrap}.tab.active{background:#16a34a;color:#fff}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:14px;margin-bottom:12px}.day{display:flex;justify-content:space-between;gap:10px;align-items:center}.day h2{margin:0;font-size:19px}.tag{font-size:11px;background:#dcfce7;color:#166534;padding:5px 8px;border-radius:999px;font-weight:700}
+.progress{height:8px;background:#e5e7eb;border-radius:99px;margin:10px 0;overflow:hidden}.bar{height:100%;background:#16a34a;width:0}
+.exercise{border-top:1px solid #e5e7eb;padding:14px 0}.exercise:first-child{border-top:0}.title{display:flex;justify-content:space-between;gap:10px}.title h3{margin:0;font-size:17px}.sets{font-size:13px;color:#6b7280;margin:4px 0 9px}
+figure{margin:0;background:#f8fafc;border-radius:14px;padding:8px}.caption{display:flex;justify-content:space-around;font-size:11px;color:#475569;font-weight:700;margin-top:-3px}
+svg{width:100%;height:175px}.machine{stroke:#334155;stroke-width:7;stroke-linecap:round;fill:none}.person{stroke:#111827;stroke-width:8;stroke-linecap:round;fill:none}.joint{fill:#f59e0b;stroke:#111827;stroke-width:3}.muscle{fill:#ef4444;opacity:.8}
+button.action{border:1px solid #d1d5db;background:#fff;border-radius:10px;padding:8px 10px;font-weight:700}.action.done{background:#dcfce7;border-color:#86efac;color:#166534}.note{font-size:12px;color:#6b7280;margin-top:7px}
+.timer{background:#111827;color:#fff;border-radius:16px;padding:12px;text-align:center;margin-bottom:12px}.timer b{display:block;font-size:30px}.timer button{border:0;border-radius:9px;padding:7px 11px;margin:3px;font-weight:700}
 </style>
 </head>
 <body>
-<header><div class="head"><div class="brand"><div class="logo">90</div><div><h1>Mi Gym 90</h1><p>Rutina para perder grasa</p></div></div><div style="font-size:24px">💪</div></div></header>
-<main>
-<section class="card hero"><h2>Tu objetivo</h2><p>Programa de 4 días · 60 minutos · nivel intermedio</p><div class="goal"><span>114 kg</span><span>90 kg</span></div><div class="progress"><div id="weightbar" class="bar" style="width:0%"></div></div><p style="margin-top:7px">Progreso estimado: <b>24 kg</b> de objetivo</p></section>
-<div class="tabs" id="tabs"></div>
-<div class="timer">Descanso<span id="clock">01:30</span><button onclick="start(60)">60 s</button><button onclick="start(90)">90 s</button><button onclick="resetTimer()">Reiniciar</button></div>
-<div id="app"></div>
-<section class="card safety"><b>⚠️ Importante para ti</b><div class="small" style="margin-top:5px">Hombro izquierdo y tobillo derecho: usa cargas moderadas, rango cómodo y cero dolor. Si un movimiento duele, deténlo y cambia el ejercicio.</div></section>
-</main><footer>Mi Gym 90 · Entrena con técnica antes que con peso.</footer>
+<header><h1>💪 Mi Gym 90</h1><p>Rutina ilustrada · 114 kg → 90 kg · 4 días</p></header>
+<main><div class="tabs" id="tabs"></div>
+<div class="timer">Descanso <b id="clock">01:30</b><button onclick="start(60)">60 s</button><button onclick="start(90)">90 s</button><button onclick="reset()">Reiniciar</button></div>
+<div id="app"></div></main>
 <script>
-const workouts=[
+const data=[
 ["Día 1","Pecho · espalda · brazos",[
-["Press de pecho en máquina","3 × 10–12","Rango cómodo; evita dolor de hombro","press"],
-["Jalón al pecho","3 × 10–12","Agarre cómodo; nunca detrás de la cabeza","pulldown"],
-["Remo sentado en máquina","3 × 10–12","Espalda estable y movimiento controlado","row"],
-["Press inclinado en máquina","2 × 10–12","Solo si el hombro está cómodo","incline"],
-["Curl de bíceps","2 × 12–15","Máquina o cable; sin balancear","curl"],
+["Press de pecho en máquina","3 × 10–12","Hombro cómodo","press"],
+["Jalón al pecho","3 × 10–12","No llevar la barra detrás de la cabeza","pulldown"],
+["Remo sentado en máquina","3 × 10–12","Espalda estable","row"],
+["Press inclinado en máquina","2 × 10–12","Solo si no molesta el hombro","incline"],
+["Curl de bíceps","2 × 12–15","Movimiento controlado","curl"],
 ["Tríceps en polea","2 × 12–15","Codos estables","triceps"],
 ["Cardio","10–15 min","Bicicleta, elíptica o caminadora","cardio"]]],
 ["Día 2","Piernas · cardio",[
-["Prensa de piernas","3 × 10–12","No bloquees las rodillas","legpress"],
-["Curl femoral","3 × 12","Controla especialmente la bajada","legcurl"],
+["Prensa de piernas","3 × 10–12","Sin bloquear las rodillas","legpress"],
+["Curl femoral","3 × 12","Controla la bajada","legcurl"],
 ["Extensión de piernas","3 × 12","Sin rebotes","extension"],
 ["Hip thrust en máquina","3 × 10–12","Empuja con control","hip"],
 ["Abductores","2 × 15","Sin rebotes","abductor"],
 ["Gemelos sentado","2 × 15","Solo si el tobillo está cómodo","calf"],
-["Cardio","10–15 min","Bicicleta o elíptica; sin correr al inicio","cardio"]]],
+["Cardio","10–15 min","Bicicleta o elíptica; no correr al inicio","cardio"]]],
 ["Día 3","Espalda · pecho · brazos",[
 ["Remo sentado","3 × 10–12","Controla cada repetición","row"],
 ["Jalón al pecho neutro","3 × 10–12","Sin dolor de hombro","pulldown"],
@@ -70,39 +59,32 @@ const workouts=[
 ["Cardio","15 min","Bicicleta o elíptica","cardio"]]]
 ];
 
-function person(x,pose){return `<circle cx="${x}" cy="48" r="13" fill="#f4c7a1" stroke="#111827" stroke-width="4"/><path class="person" d="${pose}"/>`}
-function draw(t){
+function svg(type){
+let machine=`<path class="machine" d="M35 145H255M60 145V35M60 35H115M230 145V65M230 65H190"/>`;
+let p=(x,y,pose,final=false)=>`<circle cx="${x}" cy="${y}" r="13" fill="#f4c7a1" stroke="#111827" stroke-width="4"/><path class="person" d="${pose}"/>`;
+let muscle=`<ellipse class="muscle" cx="0" cy="0" rx="11" ry="18"/>`;
 let A="",B="";
-if(t==="press"){A=person(65,"M65 62L65 104L40 132M65 104L91 132M40 132L34 152M91 132L98 152");B=person(195,"M195 62L195 104L165 132M195 104L225 132M165 132L158 152M225 132L232 152");A+=`<path class="machine" d="M32 88H98M32 88V118M98 88V118"/>`;B+=`<path class="machine" d="M160 88H228M160 88V118M228 88V118"/>`}
-else if(t==="pulldown"){A=person(65,"M65 62L65 105L42 140M65 105L88 140M42 140L36 156M88 140L95 156");B=person(195,"M195 62L195 105L172 140M195 105L218 140M172 140L166 156M218 140L225 156");A+=`<path class="machine" d="M18 28H112M28 28V100M102 28V100M28 48H102"/>`;B+=`<path class="machine" d="M148 28H242M158 28V100M232 28V100M158 48H232"/>`}
-else if(t==="row"){A=person(65,"M65 62L65 103L43 136M65 103L90 136M43 136L37 153M90 136L97 153");B=person(195,"M195 62L195 103L173 136M195 103L220 136M173 136L167 153M220 136L227 153");A+=`<path class="machine" d="M18 105H110M25 105V151M103 105V151M43 92H87"/>`;B+=`<path class="machine" d="M148 105H240M155 105V151M233 105V151M173 92H217"/>`}
-else if(t==="incline"){A=person(65,"M65 62L65 103L40 135M65 103L92 135M40 135L34 153M92 135L98 153");B=person(195,"M195 62L195 103L165 135M195 103L225 135M165 135L158 153M225 135L232 153");A+=`<path class="machine" d="M25 138H105M30 138V65M100 138V65M40 78H90"/>`;B+=`<path class="machine" d="M155 138H235M160 138V65M230 138V65M170 78H220"/>`}
-else if(t==="curl"){A=person(65,"M65 62L65 103L43 138M65 103L90 138M43 138L37 154M90 138L97 154M45 90L25 112");B=person(195,"M195 62L195 103L173 138M195 103L220 138M173 138L167 154M220 138L227 154M175 90L158 75");A+=`<path class="machine" d="M18 154H110M30 154V125"/>`;B+=`<path class="machine" d="M150 154H242M162 154V125"/>`}
-else if(t==="triceps"){A=person(65,"M65 62L65 103L43 138M65 103L90 138M43 138L37 154M90 138L97 154M44 90L28 125");B=person(195,"M195 62L195 103L173 138M195 103L220 138M173 138L167 154M220 138L227 154M174 90L174 125");A+=`<path class="machine" d="M22 28V150M22 28H105M105 28V150"/>`;B+=`<path class="machine" d="M152 28V150M152 28H235M235 28V150"/>`}
-else if(t==="legpress"){A=person(65,"M65 62L86 102L53 136M86 102L112 136M53 136L47 153M112 136L119 153");B=person(195,"M195 62L205 102L178 136M205 102L234 136M178 136L172 153M234 136L241 153");A+=`<path class="machine" d="M15 30H125L105 145H25ZM25 70H100"/>`;B+=`<path class="machine" d="M145 30H255L235 145H155ZM155 70H235"/>`}
-else if(t==="legcurl"){A=person(65,"M65 62L62 102L42 138M62 102L88 138M42 138L36 154M88 138L95 154");B=person(195,"M195 62L192 102L167 138M192 102L220 128M167 138L161 154M220 128L228 147");A+=`<path class="machine" d="M20 150H110M30 150V84M100 150V80"/>`;B+=`<path class="machine" d="M150 150H240M160 150V84M230 150V80"/>`}
-else if(t==="extension"){A=person(65,"M65 62L65 103L43 138M65 103L90 138M43 138L37 154M90 138L97 154");B=person(195,"M195 62L195 103L173 138M195 103L228 125M173 138L167 154M228 125L236 145");A+=`<path class="machine" d="M20 150H110M30 150V84M100 150V80"/>`;B+=`<path class="machine" d="M150 150H240M160 150V84M230 150V80"/>`}
-else if(t==="hip"){A=person(65,"M65 70L45 108L30 140M45 108L88 140M30 140L25 155M88 140L98 155");B=person(195,"M195 70L180 104L165 135M180 104L228 104M165 135L158 153M228 104L245 94");A+=`<path class="machine" d="M18 145H108M23 145V104M103 145V95"/>`;B+=`<path class="machine" d="M148 145H242M153 145V104M237 145V95"/>`}
-else if(t==="abductor"){A=person(65,"M65 62L65 103L50 140M65 103L80 140M50 140L44 154M80 140L87 154");B=person(195,"M195 62L195 103L165 140M195 103L228 140M165 140L159 154M228 140L235 154");A+=`<path class="machine" d="M18 145H110M28 145V95M100 145V95"/>`;B+=`<path class="machine" d="M150 145H242M160 145V95M232 145V95"/>`}
-else if(t==="calf"){A=person(65,"M65 62L65 105L50 140M65 105L80 140M50 140L44 154M80 140L87 154");B=person(195,"M195 52L195 95L180 130M195 95L210 130M180 130L174 144M210 130L217 144");A+=`<path class="machine" d="M25 145H105M32 145V72M98 145V72M32 72H98"/>`;B+=`<path class="machine" d="M155 137H235M162 137V72M228 137V72M162 72H228"/>`}
+if(type==="press"){A=p(110,48,"M110 62L110 104L78 130M110 104L142 130M78 130L65 150M142 130L155 150");B=p(145,48,"M145 62L145 104L110 130M145 104L180 130M110 130L98 150M180 130L192 150");A+=`<path class="machine" d="M72 88H148M72 88V118M148 88V118"/>`;B+=`<path class="machine" d="M105 88H185M105 88V118M185 88V118"/>`}
+else if(type==="pulldown"){A=p(125,54,"M125 68L125 108L105 140M125 108L145 140M105 140L95 155M145 140L155 155");A+=`<path class="machine" d="M55 28H195M65 28V105M185 28V105M65 45H185"/>`;B=p(125,54,"M125 68L125 108L105 140M125 108L145 140M105 140L95 155M145 140L155 155");B+=`<path class="machine" d="M55 28H195M65 28V105M185 28V105M85 72H165"/>`}
+else if(type==="row"){A=p(105,54,"M105 68L105 103L83 135M105 103L130 135M83 135L75 153M130 135L140 153");B=p(105,54,"M105 68L105 103L83 135M105 103L130 135M83 135L75 153M130 135L140 153");A+=`<path class="machine" d="M55 105H155M55 105V150M155 105V150M85 92H125"/>`;B+=`<path class="machine" d="M55 105H155M55 105V150M155 105V150M75 92H135"/>`}
+else if(type==="incline"){A=p(110,55,"M110 68L110 104L83 135M110 104L138 135M83 135L73 153M138 135L148 153");B=p(138,55,"M138 68L138 104L108 135M138 104L168 135M108 135L98 153M168 135L178 153");A+=`<path class="machine" d="M70 135H160M75 135V65M155 135V65M85 78H145"/>`;B+=`<path class="machine" d="M95 135H190M100 135V65M185 135V65M110 78H175"/>`}
+else if(type==="curl"){A=p(110,52,"M110 66L110 105L85 140M110 105L135 140M85 140L78 155M135 140L143 155M88 90L62 115");B=p(110,52,"M110 66L110 105L85 140M110 105L135 140M85 140L78 155M135 140L143 155M88 90L70 76");A+=`<path class="machine" d="M50 155H160M65 155V125"/>`;B+=`<path class="machine" d="M50 155H160M65 155V125"/>`}
+else if(type==="triceps"){A=p(115,52,"M115 66L115 105L90 140M115 105L140 140M90 140L82 155M140 140L148 155M93 88L72 115");B=p(115,52,"M115 66L115 105L90 140M115 105L140 140M90 140L82 155M140 140L148 155M93 88L93 125");A+=`<path class="machine" d="M65 30V150M65 30H150M150 30V150"/>`;B+=`<path class="machine" d="M65 30V150M65 30H150M150 30V150"/>`}
+else if(type==="legpress"){A=p(105,58,"M105 72L125 105L95 135M125 105L150 135M95 135L85 153M150 135L160 153");B=p(135,58,"M135 72L145 105L120 135M145 105L175 135M120 135L110 153M175 135L185 153");A+=`<path class="machine" d="M55 35H210L185 145H65ZM65 70H175"/>`;B+=`<path class="machine" d="M55 35H210L185 145H65ZM65 70H185"/>`}
+else if(type==="legcurl"){A=p(110,50,"M110 64L105 100L85 135M105 100L130 135M85 135L78 153M130 135L138 153");B=p(110,50,"M110 64L105 100L80 135M105 100L135 125M80 135L73 153M135 125L145 145");A+=`<path class="machine" d="M60 145H165M70 145V85M150 145V80"/>`;B+=`<path class="machine" d="M60 145H165M70 145V85M150 145V80"/>`}
+else if(type==="extension"){A=p(105,50,"M105 64L105 102L85 135M105 102L130 135M85 135L78 153M130 135L138 153");B=p(105,50,"M105 64L105 102L85 135M105 102L145 125M85 135L78 153M145 125L155 145");A+=`<path class="machine" d="M65 145H170M75 145V85M155 145V80"/>`;B+=`<path class="machine" d="M65 145H170M75 145V85M155 145V80"/>`}
+else if(type==="hip"){A=p(105,65,"M105 79L85 110L70 140M85 110L125 140M70 140L65 155M125 140L135 155");B=p(105,65,"M105 79L90 105L75 135M90 105L135 105M75 135L68 153M135 105L155 95");A+=`<path class="machine" d="M55 145H165M60 145V105M160 145V95"/>`;B+=`<path class="machine" d="M55 145H165M60 145V105M160 145V95"/>`}
+else if(type==="abductor"){A=p(105,50,"M105 64L105 103L90 140M105 103L120 140M90 140L82 155M120 140L128 155");B=p(105,50,"M105 64L105 103L75 140M105 103L140 140M75 140L67 155M140 140L148 155");A+=`<path class="machine" d="M60 145H155M70 145V95M145 145V95"/>`;B+=`<path class="machine" d="M60 145H155M70 145V95M145 145V95"/>`}
+else if(type==="calf"){A=p(105,50,"M105 64L105 105L90 140M105 105L120 140M90 140L82 153M120 140L128 153");B=p(105,43,"M105 57L105 98L90 133M105 98L120 133M90 133L82 146M120 133L128 146");A+=`<path class="machine" d="M65 145H150M75 145V70M140 145V70M75 70H140"/>`;B+=`<path class="machine" d="M65 138H150M75 138V70M140 138V70M75 70H140"/>`}
 else return `<div style="text-align:center;font-size:55px;padding:35px">🚴</div>`;
-return `<svg viewBox="0 0 260 175">${A}${B}</svg>`
+return `<svg viewBox="0 0 270 175"><g transform="translate(0,0)">${A}</g><g transform="translate(130,0)">${B}</g></svg>`;
 }
-let day=0, timer=90, interval;
-function render(){
-document.querySelectorAll(".tab").forEach((b,i)=>b.classList.toggle("active",i===day));
-const w=workouts[day], key="gym90final_"+day, done=JSON.parse(localStorage.getItem(key)||"[]");
-document.getElementById("app").innerHTML=`<section class="card"><div class="row"><h2 style="margin:0">${w[0]}</h2><span class="pill">${w[1]}</span></div><p class="small">Marca cada ejercicio cuando lo termines.</p><div class="progress"><div id="daybar" class="bar" style="background:#16a34a"></div></div><div id="list"></div></section>`;
-const list=document.getElementById("list");
-w[2].forEach((e,i)=>{const el=document.createElement("article");el.className="exercise";el.innerHTML=`<div class="title"><h3>${i+1}. ${e[0]}</h3><span class="sets">${e[1]}</span></div><div class="figure">${draw(e[3])}<div class="caption"><span>POSICIÓN INICIAL</span><span>POSICIÓN FINAL</span></div></div><div class="note">💡 ${e[2]}</div><button class="action ${done.includes(i)?"done":""}" onclick="toggle(${i})">${done.includes(i)?"✓ Completado":"Marcar ejercicio"}</button> ${i>0?'<button class="action" onclick="start(90)">⏱ 90 s</button>':""}`;list.appendChild(el)});
-document.getElementById("daybar").style.width=(done.length/w[2].length*100)+"%";
-}
-function toggle(i){const k="gym90final_"+day;let d=JSON.parse(localStorage.getItem(k)||"[]");d=d.includes(i)?d.filter(x=>x!==i):[...d,i];localStorage.setItem(k,JSON.stringify(d));render()}
+let day=0,t=90,intv;
+function render(){document.querySelectorAll(".tab").forEach((x,i)=>x.classList.toggle("active",i===day));let w=data[day],key="d"+day,done=JSON.parse(localStorage.getItem(key)||"[]");document.getElementById("app").innerHTML=`<section class="card"><div class="day"><h2>${w[0]}</h2><span class="tag">${w[1]}</span></div><div class="progress"><div class="bar" id="bar"></div></div><div id="list"></div></section>`;let list=document.getElementById("list");w[2].forEach((e,i)=>{let d=document.createElement("div");d.className="exercise";d.innerHTML=`<div class="title"><h3>${i+1}. ${e[0]}</h3><span class="sets">${e[1]}</span></div><figure>${svg(e[3])}<div class="caption"><span>POSICIÓN INICIAL</span><span>POSICIÓN FINAL</span></div></figure><div class="note">💡 ${e[2]}</div><br><button class="action ${done.includes(i)?"done":""}" onclick="toggle(${i},this)">${done.includes(i)?"✓ Completado":"Marcar ejercicio"}</button> <button class="action" onclick="start(90)">⏱ 90 s</button></div>`;list.appendChild(d)});document.getElementById("bar").style.width=(done.length/w[2].length*100)+"%"}
+function toggle(i,b){let k="d"+day,d=JSON.parse(localStorage.getItem(k)||"[]");d=d.includes(i)?d.filter(x=>x!==i):[...d,i];localStorage.setItem(k,JSON.stringify(d));render()}
 function fmt(s){return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0")}
-function start(s){clearInterval(interval);timer=s;clock.textContent=fmt(timer);interval=setInterval(()=>{timer--;clock.textContent=fmt(timer);if(timer<=0){clearInterval(interval);navigator.vibrate?.(300)}},1000)}
-function resetTimer(){clearInterval(interval);timer=90;clock.textContent=fmt(timer)}
-workouts.forEach((w,i)=>{let b=document.createElement("button");b.className="tab"+(i===0?" active":"");b.textContent=w[0];b.onclick=()=>{day=i;render()};tabs.appendChild(b)});
-if("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("sw.js");
-render();
+function start(s){clearInterval(intv);t=s;clock.textContent=fmt(t);intv=setInterval(()=>{clock.textContent=fmt(--t);if(t<=0){clearInterval(intv);navigator.vibrate?.(300)}},1000)}
+function reset(){clearInterval(intv);t=90;clock.textContent=fmt(t)}
+data.forEach((x,i)=>{let b=document.createElement("button");b.className="tab"+(!i?" active":"");b.textContent=x[0];b.onclick=()=>{day=i;render()};tabs.appendChild(b)});render();
 </script>
 </body></html>
