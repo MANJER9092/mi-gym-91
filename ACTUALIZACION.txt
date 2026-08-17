@@ -1,0 +1,3 @@
+Mi Gym 90 — actualización de caché v3
+Sube/reemplaza TODOS estos archivos en el repositorio mi-gym-91.
+El archivo sw.js es especialmente importante: elimina la caché anterior y toma la versión ilustrada.
