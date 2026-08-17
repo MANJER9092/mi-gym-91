@@ -3,133 +3,120 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#111827">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Mi Gym 90">
+<meta name="theme-color" content="#07100d">
 <link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="icon-180.png">
 <title>Mi Gym 90</title>
 <style>
-:root{--bg:#f4f6f8;--card:#fff;--ink:#172033;--muted:#667085;--green:#16a34a;--green2:#dcfce7;--navy:#101828;--line:#e5e7eb;--warn:#fff7ed;--warnline:#fed7aa;--blue:#0879e8}
-*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif}button{font:inherit}
-header{background:var(--navy);color:#fff;padding:18px 16px 16px calc(16px + env(safe-area-inset-left));padding-top:calc(16px + env(safe-area-inset-top));position:sticky;top:0;z-index:20}
-.header-in{max-width:760px;margin:auto;display:flex;align-items:center;gap:12px}.brand-icon{width:46px;height:46px;border-radius:14px;background:#facc15;color:#111827;display:grid;place-items:center;font-size:20px;font-weight:950;flex:none}.brand-title{font-size:25px;font-weight:900;letter-spacing:-.6px;line-height:1}.brand-sub{font-size:12px;color:#cbd5e1;margin-top:5px}
-main{max-width:760px;margin:auto;padding:14px 14px calc(92px + env(safe-area-inset-bottom))}
-.tabs{display:flex;gap:8px;overflow:auto;padding:2px 1px 6px}.tab{border:0;background:#fff;color:var(--blue);border-radius:999px;padding:11px 17px;font-weight:850;white-space:nowrap;box-shadow:0 1px 3px #0000000b}.tab.active{background:var(--green);color:#fff}
-.hero{background:var(--navy);color:#fff;border-radius:20px;padding:17px;margin:8px 0 12px;box-shadow:0 8px 25px #00000012}.hero-row{display:flex;justify-content:space-between;gap:10px}.hero h2{font-size:20px;margin:0}.hero p{margin:4px 0 0;color:#cbd5e1;font-size:12px}.goal{display:flex;justify-content:space-between;font-weight:900;margin-top:14px}.progress{height:9px;border-radius:99px;background:#344054;overflow:hidden;margin-top:7px}.bar{height:100%;background:#facc15;width:0}
-.timer{background:#111827;color:#fff;border-radius:20px;padding:15px;text-align:center;margin-bottom:12px}.timer-label{font-size:14px;color:#cbd5e1}.clock{font-size:38px;font-weight:950;letter-spacing:1px}.timer button{border:0;background:#fff;color:#0879e8;border-radius:10px;padding:8px 12px;margin:3px;font-weight:850}
-.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px;margin:12px 0;box-shadow:0 4px 18px #00000009}.day-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.day-head h2{margin:0;font-size:24px}.pill{background:var(--green2);color:#166534;border-radius:999px;padding:8px 10px;font-size:12px;font-weight:850}
-.exercise{padding:20px 0;border-top:1px solid var(--line)}.exercise:first-child{border-top:0}.ex-top{display:flex;justify-content:space-between;gap:12px}.ex-name{font-size:19px;font-weight:900;line-height:1.2}.ex-sets{font-size:13px;font-weight:900;white-space:nowrap;color:#475467}
-.figure{margin-top:12px;border-radius:17px;background:#f8fafc;border:1px solid #edf0f3;padding:8px}.figure svg{display:block;width:100%;height:auto}.labels{display:grid;grid-template-columns:1fr 1fr;text-align:center;font-size:10px;letter-spacing:.5px;font-weight:950;color:#475467;margin-top:-1px}.movement{display:grid;grid-template-columns:1fr;gap:7px;margin-top:10px}.info{border-radius:12px;background:#f8fafc;padding:10px 11px;font-size:13px;line-height:1.35}.info b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px;color:#344054}.info.good{background:#ecfdf3}.info.warn{background:var(--warn);border:1px solid var(--warnline)}
-.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.chip{background:#eef2f6;border-radius:999px;padding:6px 9px;font-size:11px;font-weight:800;color:#475467}
-.actions{display:flex;gap:8px;margin-top:11px;flex-wrap:wrap}.action{border:1px solid #d0d5dd;background:#fff;border-radius:11px;padding:9px 11px;font-weight:850;color:var(--blue)}.action.done{background:#dcfce7;border-color:#86efac;color:#166534}
-details{margin-top:10px;border-top:1px dashed #d0d5dd;padding-top:9px}summary{font-weight:850;font-size:13px;cursor:pointer}.details-body{font-size:12px;color:#475467;line-height:1.5;margin-top:8px}
-.safety{background:var(--warn);border-color:var(--warnline)}.safety b{color:#9a3412}.small{font-size:12px;color:var(--muted);line-height:1.45}
-footer{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:9px 14px calc(9px + env(safe-area-inset-bottom));text-align:center;color:#667085;font-size:10px;z-index:30}
-.machine{stroke:#344054;stroke-width:7;stroke-linecap:round;stroke-linejoin:round;fill:none}.person{stroke:#111827;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;fill:none}.joint{fill:#f4c7a1;stroke:#111827;stroke-width:4}.weight{fill:#344054}.arrow{stroke:#16a34a;stroke-width:5;stroke-linecap:round;marker-end:url(#arrow)}
+:root{
+  --bg:#050b09;--panel:#09130f;--panel2:#0d1915;--line:#20302a;
+  --green:#64df20;--green2:#39b51a;--text:#f5f7f5;--muted:#9ca9a4;
+  --blue:#49a7ff;--yellow:#ffd42a;--red:#ff5d5d;--radius:14px;
+}
+*{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+button,input{font:inherit} button{cursor:pointer}
+.app{min-height:100vh;display:grid;grid-template-columns:330px 1fr;gap:12px;padding:12px;max-width:1700px;margin:auto}
+.sidebar,.main{min-width:0}.sidebar{display:flex;flex-direction:column;gap:10px}
+.card{background:linear-gradient(180deg,#0b1612,#08110e);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 8px 24px #0008}
+.brand{padding:15px 18px;display:flex;align-items:center;gap:14px}
+.menu{font-size:27px}.logo{font-size:29px;font-weight:900;letter-spacing:-1px}.logo span{color:var(--green)}
+.tag{font-size:12px;color:var(--muted);letter-spacing:1.5px;margin-top:2px}
+.goal{padding:18px}.eyebrow{font-size:13px;color:var(--green);font-weight:800}.goalnums{font-size:41px;font-weight:800;margin:7px 0}.goalnums span{color:var(--green);padding:0 8px}.goal p{margin:0;color:#d6ddd9;font-size:14px}.bar{height:10px;background:#18231f;border-radius:99px;margin:15px 0 7px;overflow:hidden}.bar i{display:block;width:18%;height:100%;background:var(--green);border-radius:99px}.barrow{display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
+.section-title{padding:13px 15px 8px;font-size:13px;font-weight:800;color:#dce3df}
+.days{padding:0 9px 9px}.day{display:flex;align-items:center;gap:10px;padding:11px 10px;margin:5px 0;border-radius:9px;background:#0d1915;border:1px solid #14231e;color:white;text-align:left;width:100%}.day.active{outline:1px solid #315f25;background:#112019}.day .ico{width:30px;text-align:center;font-size:20px}.day b{font-size:14px}.day small{display:block;color:#aab5b1;margin-top:2px}.arrow{margin-left:auto;color:#8f9b96}
+.alert{padding:15px}.alert h3{margin:0 0 10px;color:var(--yellow);font-size:14px}.alert p{font-size:12px;color:#d1d8d5;line-height:1.45;margin:7px 0}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:10px}.stat{background:#0d1915;border:1px solid #17261f;border-radius:9px;padding:9px;text-align:center}.stat b{display:block;font-size:15px}.stat small{color:#8f9b96;font-size:10px}
+.chart{padding:14px}.chart h3{margin:0;font-size:13px}.chart svg{width:100%;height:125px;margin-top:8px}.warm{padding:14px}.warm h3{font-size:13px;margin:0 0 10px}.warm div{display:flex;justify-content:space-between;font-size:12px;padding:7px 0;color:#d4dbd7}.warm span{color:#8f9b96}
+.bottom{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;padding:8px}.bottom button{background:transparent;border:0;color:#9ca8a3;font-size:10px;padding:7px 2px}.bottom button.active{color:var(--green)}.bottom b{display:block;font-size:17px;margin-bottom:2px}
+.main{display:flex;flex-direction:column;gap:10px}
+.topnav{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;padding:7px}.topnav button{border:0;background:transparent;color:#e6ece8;padding:9px 3px;font-size:12px}.topnav button.active{color:var(--green)}.topnav b{display:block;font-size:18px;margin-bottom:3px}
+.hero{padding:12px 14px;display:flex;align-items:center;gap:10px}.hero .back{font-size:25px}.hero h1{font-size:19px;margin:0}.hero small{color:var(--blue)}.hero .dots{margin-left:auto;font-size:22px}
+.exercise{padding:0 14px 14px}.exercise-head{display:flex;align-items:center;gap:9px}.exercise-head h2{font-size:19px;margin:0}.badge{background:#16351b;color:var(--green);border:1px solid #275f2c;border-radius:5px;padding:4px 7px;font-size:11px}.images{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:10px}.pose{position:relative;background:#0d1714;border-radius:9px;overflow:hidden;border:1px solid #1a2a23;min-height:300px}.pose .label{position:absolute;top:10px;left:0;right:0;text-align:center;color:#58b4ff;font-size:12px;font-weight:700;z-index:2}.pose.final .label{color:var(--green)}
+.pose svg{width:100%;height:100%;min-height:300px;display:block}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:7px}.info{padding:13px;background:#0b1713;border:1px solid var(--line);border-radius:9px}.info h3{font-size:13px;color:#55aefc;margin:0 0 8px}.info p,.info li{font-size:12px;line-height:1.5;color:#d0d8d4}.info ul{margin:0;padding-left:17px}.check{color:var(--green);font-weight:900;margin-right:5px}.muscle{display:flex;gap:15px;align-items:center}.muscle svg{width:100px;min-width:100px}.machine{display:flex;gap:12px;align-items:center}.machine svg{width:88px;min-width:88px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:7px}.metric{text-align:center;background:#0b1713;border:1px solid var(--line);padding:11px 5px;border-radius:8px}.metric b{display:block;font-size:18px}.metric small{font-size:10px;color:#8e9b96}
+.primary{width:100%;margin-top:7px;border:0;border-radius:8px;padding:13px;background:linear-gradient(90deg,#47bd18,#63dd1e);color:#fff;font-weight:900;font-size:15px}.primary:active{transform:scale(.99)}
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.work{padding:13px}.work h3{margin:0 0 8px;font-size:13px}.timer{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:220px}.ring{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--green) 0deg,#17241f 0deg);position:relative}.ring:after{content:"";position:absolute;inset:10px;background:#08110e;border-radius:50%}.ring .inside{position:relative;z-index:2;text-align:center}.ring .inside small{display:block;color:#b9c3bf}.ring .inside b{font-size:28px}.controls{display:flex;gap:8px;margin-top:10px}.controls button{flex:1;border:1px solid #2a3933;background:#111d19;color:white;border-radius:7px;padding:9px}.record{padding:13px}.sets{display:grid;grid-template-columns:repeat(4,1fr);gap:5px}.sets button{background:#111d19;border:1px solid #24342d;color:#dce2df;padding:8px;border-radius:7px}.sets button.sel{background:#1c5d23;color:#fff;border-color:#55bc22}.inputs{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:9px}.inputs label{font-size:10px;color:#8d9994}.inputs input{width:100%;background:#111d19;border:1px solid #26362f;color:#fff;border-radius:6px;padding:9px;margin-top:3px}.footer-note{padding:12px;text-align:center;color:#84908b;font-size:11px}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%) translateY(20px);background:#16251f;border:1px solid #38533f;color:#fff;padding:10px 15px;border-radius:99px;opacity:0;pointer-events:none;transition:.25s;z-index:10}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:1000px){.app{grid-template-columns:1fr}.sidebar{display:none}.main{max-width:760px;margin:auto;width:100%}.topnav{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:620px){.app{padding:0}.card{border-radius:0}.topnav{position:sticky;top:0;z-index:5;background:#07100d}.info-grid,.work-grid{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(4,1fr)}.images{grid-template-columns:1fr 1fr}.pose,.pose svg{min-height:205px}.exercise-head h2{font-size:16px}.hero h1{font-size:17px}.topnav button{font-size:10px}.topnav b{font-size:16px}.metrics .metric b{font-size:15px}}
 </style>
 </head>
 <body>
-<header><div class="header-in"><div class="brand-icon">90</div><div><div class="brand-title">Mi Gym 90</div><div class="brand-sub">Guía profesional · 114 kg → 90 kg · 4 días</div></div></div></header>
-<main>
-<section class="hero"><div class="hero-row"><div><h2>Objetivo: perder grasa</h2><p>4 sesiones · hasta 60 min · técnica antes que peso</p></div><div style="font-size:26px">💪</div></div><div class="goal"><span>114 kg</span><span>90 kg</span></div><div class="progress"><div class="bar" id="weightbar"></div></div><div class="small" style="color:#cbd5e1;margin-top:7px">Meta: −24 kg · mantén un ritmo sostenible.</div></section>
-<div class="tabs" id="tabs"></div>
-<div class="timer"><div class="timer-label">DESCANSO ENTRE SERIES</div><div class="clock" id="clock">01:30</div><button onclick="start(60)">60 s</button><button onclick="start(90)">90 s</button><button onclick="resetTimer()">Reiniciar</button></div>
-<div id="app"></div>
-<section class="card safety"><b>⚠️ Hombro izquierdo y tobillo derecho</b><div class="small" style="margin-top:5px">Trabaja sin dolor, usa un rango cómodo y aumenta la carga solo cuando la técnica sea sólida. Evita impactos y movimientos forzados. Si el dolor aparece o aumenta, detén el ejercicio.</div></section>
-</main><footer>Mi Gym 90 · versión 4 · guía visual de técnica</footer>
-
-<script>
-const workouts=[
-{day:"Día 1",focus:"Pecho · espalda · brazos",ex:[
-["Press de pecho en máquina","3 × 10–12","Press","Pecho · tríceps","Espalda apoyada y hombros bajos.","Empuja las asas al frente sin bloquear los codos.","No despegues la espalda ni lleves los codos demasiado atrás.","Ajusta el asiento para que las asas queden a la altura media del pecho."],
-["Jalón al pecho","3 × 10–12","Jalón","Dorsal · bíceps","Brazos arriba, pecho abierto y tronco estable.","Lleva la barra hacia la parte alta del pecho con los codos hacia abajo.","No lleves la barra detrás de la cabeza ni balancees el torso.","Busca una barra con agarre que no moleste al hombro."],
-["Remo sentado en máquina","3 × 10–12","Remo","Espalda · bíceps","Pecho apoyado o tronco neutro, brazos extendidos.","Tira llevando los codos hacia atrás y junta suavemente las escápulas.","No encorves la espalda ni tires con impulso.","Ajusta el asiento para que el agarre quede frente al torso."],
-["Press inclinado en máquina","2 × 10–12","Inclinado","Pecho superior · tríceps","Respaldo inclinado y hombros relajados.","Empuja hacia delante siguiendo el recorrido de la máquina.","No fuerces la profundidad si el hombro molesta.","Usa solo si el hombro izquierdo se siente cómodo."],
-["Curl de bíceps","2 × 12–15","Curl","Bíceps","Codos junto al cuerpo y muñecas neutras.","Flexiona los codos sin mover los hombros.","No balancees el torso para subir el peso.","Máquina o polea; elige la opción más estable."],
-["Tríceps en polea","2 × 12–15","Tríceps","Tríceps","Codos pegados al cuerpo y pecho estable.","Extiende los codos hasta casi completar el recorrido.","No abras los codos ni inclines el cuerpo para ganar impulso.","Cuerda o barra según comodidad del hombro."],
-["Cardio","10–15 min","Cardio","Condición · gasto energético","Ritmo en el que puedas hablar con cierta comodidad.","Mantén un esfuerzo continuo y moderado.","Evita correr al inicio por el tobillo.","Bicicleta o elíptica son buenas opciones iniciales."]
-]},
-{day:"Día 2",focus:"Piernas · cardio",ex:[
-["Prensa de piernas","3 × 10–12","Prensa","Cuádriceps · glúteos","Pies firmes y rodillas alineadas con los pies.","Baja de forma controlada y empuja sin bloquear rodillas.","No dejes que las rodillas colapsen hacia dentro.","Coloca los pies a una altura que te permita un rango cómodo."],
-["Curl femoral","3 × 12","Femoral","Isquiotibiales","Rodillas alineadas con el eje de la máquina.","Flexiona las rodillas controlando la vuelta.","No levantes la cadera ni golpees el tope.","Ajusta el rodillo justo por encima del talón."],
-["Extensión de piernas","3 × 12","Extensión","Cuádriceps","Espalda apoyada y rodilla alineada con el eje.","Extiende las rodillas de forma controlada.","No rebotes ni bloquees con violencia.","Usa una carga que permita controlar toda la bajada."],
-["Hip thrust en máquina","3 × 10–12","Hip thrust","Glúteos · femorales","Espalda apoyada, pies firmes y abdomen activo.","Eleva la cadera hasta alinear hombros, cadera y rodillas.","No hiperextiendas la espalda al final.","Ajusta la máquina para que el recorrido sea cómodo."],
-["Abductores","2 × 15","Abductores","Glúteo medio","Espalda apoyada y pelvis estable.","Abre las piernas lentamente y regresa con control.","No rebotes al abrir.","Usa una carga ligera-moderada y controla el cierre."],
-["Gemelos sentado","2 × 15","Gemelos","Pantorrilla","Pies paralelos y apoyo estable.","Sube los talones y baja lentamente.","No rebotes; reduce el rango si el tobillo molesta.","Si hay dolor de tobillo, omite este ejercicio y prioriza bicicleta."],
-["Cardio","10–15 min","Cardio","Condición · gasto energético","Cadencia cómoda y estable.","Mantén esfuerzo moderado sin impacto.","No corras mientras el tobillo esté sensible.","Bicicleta o elíptica."]
-]},
-{day:"Día 3",focus:"Espalda · pecho · brazos",ex:[
-["Remo sentado","3 × 10–12","Remo","Espalda · bíceps","Tronco estable y hombros abajo.","Lleva los codos atrás sin encoger los hombros.","No uses impulso.","Elige una máquina con recorrido cómodo para el hombro."],
-["Jalón al pecho neutro","3 × 10–12","Jalón neutro","Dorsal · bíceps","Agarre neutro y pecho abierto.","Lleva los codos hacia las costillas.","No tires detrás de la cabeza.","El agarre neutro suele ser una opción cómoda para el hombro."],
-["Press de pecho en máquina","3 × 10–12","Press","Pecho · tríceps","Espalda apoyada y manos simétricas.","Empuja de forma controlada.","No bloquees los codos.","Mantén el rango libre de dolor."],
-["Pec deck","2 × 12–15","Pec deck","Pecho","Antebrazos/manos apoyados según la máquina.","Cierra los brazos delante del cuerpo sin golpear las almohadillas.","No fuerces la apertura hacia atrás.","Reduce el rango si el hombro izquierdo se siente tirante."],
-["Curl de bíceps","2 × 12–15","Curl","Bíceps","Codos estables.","Flexiona y baja lentamente.","No balancees el cuerpo.","Máquina o cable."],
-["Tríceps con cuerda","2 × 12–15","Tríceps","Tríceps","Codos cerca del cuerpo.","Extiende y separa ligeramente las puntas al final.","No adelantes los hombros.","Carga moderada y controlada."],
-["Cardio","15 min","Cardio","Condición · gasto energético","Ritmo moderado.","Mantén continuidad.","Evita impacto si el tobillo molesta.","Bicicleta o elíptica."]
-]},
-{day:"Día 4",focus:"Piernas · cardio",ex:[
-["Prensa de piernas","3 × 12","Prensa","Cuádriceps · glúteos","Pies firmes y rodillas alineadas.","Empuja con control.","No bloquees las rodillas.","Carga moderada."],
-["Curl femoral","3 × 10–12","Femoral","Isquiotibiales","Alinea rodillas con el eje.","Flexiona y vuelve lentamente.","No rebotes.","Controla especialmente la bajada."],
-["Extensión de piernas","3 × 12","Extensión","Cuádriceps","Espalda apoyada.","Extiende y baja con control.","No rebotes.","Carga moderada."],
-["Hip thrust","3 × 10–12","Hip thrust","Glúteos · femorales","Pies firmes y pelvis estable.","Eleva la cadera hasta una posición neutra.","No hiperextiendas la espalda.","Máquina."],
-["Abductores","2 × 15","Abductores","Glúteo medio","Espalda apoyada.","Abre y cierra lentamente.","No rebotes.","Control total."],
-["Gemelos","2 × 15","Gemelos","Pantorrilla","Apoyo estable.","Sube y baja lentamente.","Si duele el tobillo, omite.","Solo si el tobillo está cómodo."],
-["Cardio","15 min","Cardio","Condición · gasto energético","Esfuerzo moderado.","Mantén ritmo constante.","Sin impacto.","Bicicleta o elíptica."]
-]}
-];
-
-function svgFigure(type){
-const defs=`<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#16a34a"/></marker></defs>`;
-const head=(x,y)=>`<circle class="joint" cx="${x}" cy="${y}" r="12"/>`;
-const machine=(s)=>`<path class="machine" d="${s}"/>`;
-let left="",right="";
-if(type==="Press"){left=head(65,45)+`<path class="person" d="M65 58V103M65 72L42 91M65 72L88 91M42 91L31 91M88 91L99 91M65 103L48 137M65 103L82 137"/>`+machine("M25 82H105M25 82V132M105 82V132");right=head(195,45)+`<path class="person" d="M195 58V103M195 72L172 82M195 72L218 82M172 82L158 82M218 82L232 82M195 103L178 137M195 103L212 137"/>`+machine("M148 72H242M148 72V132M242 72V132");}
-else if(type==="Jalón"||type==="Jalón neutro"){left=head(65,58)+`<path class="person" d="M65 71V112M65 83L42 49M65 83L88 49M42 49L42 34M88 49L88 34M65 112L47 145M65 112L83 145"/>`+machine("M20 27H110M28 27V112M102 27V112M42 34H88");right=head(195,58)+`<path class="person" d="M195 71V112M195 83L171 72M195 83L219 72M171 72L171 92M219 72L219 92M195 112L177 145M195 112L213 145"/>`+machine("M150 27H240M158 27V112M232 27V112M171 72H219");}
-else if(type==="Remo"||type==="Remo sentado"){left=head(65,58)+`<path class="person" d="M65 71V112M65 82L41 101M65 82L89 101M41 101L28 101M89 101L102 101M65 112L48 143M65 112L82 143"/>`+machine("M20 116H110M25 116V150M105 116V150");right=head(195,58)+`<path class="person" d="M195 71V112M195 82L174 92M195 82L216 92M174 92L157 92M216 92L233 92M195 112L178 143M195 112L212 143"/>`+machine("M150 116H240M155 116V150M235 116V150");}
-else if(type==="Inclinado"){left=head(65,48)+`<path class="person" d="M65 61L73 101M73 78L45 63M73 78L99 67M45 63L36 63M99 67L108 67M73 101L48 138M73 101L91 138"/>`+machine("M25 145H108M32 145V55M101 145V55M35 62H96");right=head(195,48)+`<path class="person" d="M195 61L203 101M203 78L176 59M203 78L229 59M176 59L166 59M229 59L239 59M203 101L178 138M203 101L221 138"/>`+machine("M155 145H238M162 145V55M231 145V55M165 58H226");}
-else if(type==="Curl"){left=head(65,47)+`<path class="person" d="M65 60V104M65 74L42 91M65 74L88 91M42 91L35 111M88 91L95 111M65 104L48 141M65 104L82 141"/>`;right=head(195,47)+`<path class="person" d="M195 60V104M195 74L171 91M195 74L219 91M171 91L165 75M219 91L225 75M195 104L178 141M195 104L212 141"/>`;left+=machine("M25 151H105");right+=machine("M155 151H235");}
-else if(type==="Tríceps"){left=head(65,47)+`<path class="person" d="M65 60V104M65 74L42 91M65 74L88 91M42 91L29 123M88 91L88 123M65 104L48 141M65 104L82 141"/>`;right=head(195,47)+`<path class="person" d="M195 60V104M195 74L171 91M195 74L219 91M171 91L171 123M219 91L219 123M195 104L178 141M195 104L212 141"/>`;left+=machine("M24 24V151M24 24H106");right+=machine("M154 24V151M154 24H236");}
-else if(type==="Prensa"){left=head(65,45)+`<path class="person" d="M65 58L82 99M82 99L53 128M82 99L105 128M53 128L47 147M105 128L112 147"/>`+machine("M15 30H120L105 150H25Z");right=head(195,45)+`<path class="person" d="M195 58L201 99M201 99L173 128M201 99L229 128M173 128L167 147M229 128L236 147"/>`+machine("M140 30H255L240 150H150Z");}
-else if(type==="Femoral"||type==="Extensión"){left=head(65,45)+`<path class="person" d="M65 58V100M65 100L45 135M65 100L89 135M45 135L39 151M89 135L96 151"/>`+machine("M20 150H110M30 150V82M100 150V82");right=head(195,45)+`<path class="person" d="M195 58V100M195 100L171 132M195 100L222 119M171 132L165 149M222 119L230 139"/>`+machine("M150 150H240M160 150V82M230 150V82");}
-else if(type==="Hip thrust"){left=head(65,48)+`<path class="person" d="M65 61L45 102L29 136M45 102L88 136M29 136L23 151M88 136L97 151"/>`+machine("M18 145H110M24 145V104M104 145V95");right=head(195,48)+`<path class="person" d="M195 61L181 102L164 135M181 102L228 102M164 135L158 151M228 102L244 92"/>`+machine("M148 145H242M154 145V104M236 145V95");}
-else if(type==="Abductores"){left=head(65,48)+`<path class="person" d="M65 61V104M65 104L48 138M65 104L82 138M48 138L42 151M82 138L89 151"/>`+machine("M18 145H110M28 145V95M100 145V95");right=head(195,48)+`<path class="person" d="M195 61V104M195 104L163 138M195 104L228 138M163 138L157 151M228 138L235 151"/>`+machine("M150 145H242M160 145V95M232 145V95");}
-else if(type==="Gemelos"){left=head(65,45)+`<path class="person" d="M65 58V105M65 105L50 139M65 105L80 139M50 139L44 153M80 139L87 153"/>`+machine("M25 145H105M32 145V72M98 145V72M32 72H98");right=head(195,39)+`<path class="person" d="M195 52V96M195 96L180 130M195 96L210 130M180 130L174 144M210 130L217 144"/>`+machine("M155 137H235M162 137V72M228 137V72M162 72H228");}
-else {return `<svg viewBox="0 0 260 175"><text x="130" y="92" text-anchor="middle" font-size="60">🚴</text></svg>`}
-return `<svg viewBox="0 0 260 175">${defs}${left}<path class="arrow" d="M119 84H141"/><text x="130" y="18" text-anchor="middle" font-size="9" fill="#667085" font-weight="800">MOVIMIENTO CONTROLADO</text>${right}</svg>`;
-}
-function keyFor(s){return "gym90v4_"+s.replace(/\W+/g,"_")}
-let day=0,timer=90,interval;
-function render(){
-document.querySelectorAll(".tab").forEach((b,i)=>b.classList.toggle("active",i===day));
-const w=workouts[day], key=keyFor(w.day), done=JSON.parse(localStorage.getItem(key)||"[]");
-document.getElementById("app").innerHTML=`<section class="card"><div class="day-head"><div><h2>${w.day}</h2><div class="small" style="margin-top:4px">Completa la sesión con técnica controlada.</div></div><span class="pill">${w.focus}</span></div><div class="progress" style="margin-top:12px"><div class="bar" id="daybar" style="background:#16a34a"></div></div><div id="list"></div></section>`;
-const list=document.getElementById("list");
-w.ex.forEach((e,i)=>{
-let el=document.createElement("article");el.className="exercise";
-const isCardio=e[2]==="Cardio";
-el.innerHTML=`<div class="ex-top"><div class="ex-name">${i+1}. ${e[0]}</div><div class="ex-sets">${e[1]}</div></div>
-<div class="figure">${svgFigure(e[2])}<div class="labels"><span>POSICIÓN INICIAL</span><span>POSICIÓN FINAL</span></div></div>
-<div class="chips"><span class="chip">🏋️ ${e[2]}</span><span class="chip">🎯 ${e[3]}</span></div>
-<div class="movement">
-<div class="info"><b>1 · Posición inicial</b>${e[4]}</div>
-<div class="info good"><b>2 · Movimiento</b>${e[5]}</div>
-<div class="info warn"><b>3 · Evita</b>${e[6]}</div>
-<div class="info"><b>4 · Máquina / ajuste</b>${e[7]}</div>
+<div class="app">
+<aside class="sidebar">
+  <div class="card brand"><div class="menu">☰</div><div><div class="logo">MI GYM <span>90</span></div><div class="tag">TU MEJOR VERSIÓN</div></div></div>
+  <div class="card goal"><div class="eyebrow">OBJETIVO</div><div class="goalnums">114 <span>→</span> <b>90</b> <small>kg</small></div><p>Déficit sostenible, disciplina constante.</p><div class="bar"><i></i></div><div class="barrow"><span>18%</span><span>13.3 kg restantes</span></div></div>
+  <div class="card"><div class="section-title">RUTINA SEMANAL <span style="float:right;color:#8f9b96;font-weight:500">4 días</span></div><div class="days" id="dayList"></div></div>
+  <div class="card alert"><h3>⚠ CUIDADO IMPORTANTE</h3><p>🟡 <b>Hombro izquierdo:</b> evita movimientos bruscos por encima de la cabeza.</p><p>🦶 <b>Tobillo derecho:</b> calienta bien y evita impactos. Prioriza estabilidad.</p></div>
+  <div class="card"><div class="section-title">PROGRESO GENERAL <span style="float:right;color:#8f9b96;font-weight:500">Esta semana</span></div><div class="stats"><div class="stat"><b id="sWork">8</b><small>Entrenamientos</small></div><div class="stat"><b id="sSets">64</b><small>Series totales</small></div><div class="stat"><b id="sVol">12,450</b><small>Volumen kg</small></div><div class="stat"><b id="sCal">5,230</b><small>Calorías est.</small></div></div></div>
+  <div class="card chart"><h3>PROGRESO · VOLUMEN (KG)</h3><svg viewBox="0 0 300 120" preserveAspectRatio="none"><path d="M0 100 L20 88 L42 80 L62 80 L85 62 L108 67 L130 52 L150 78 L175 73 L198 56 L220 60 L240 54 L260 35 L282 27 L300 18" fill="none" stroke="#64df20" stroke-width="3"/><path d="M0 100 L20 88 L42 80 L62 80 L85 62 L108 67 L130 52 L150 78 L175 73 L198 56 L220 60 L240 54 L260 35 L282 27 L300 18 L300 120 L0 120Z" fill="#64df20" opacity=".12"/><g fill="#64df20"><circle cx="85" cy="62" r="3"/><circle cx="198" cy="56" r="3"/><circle cx="300" cy="18" r="3"/></g></svg><div class="barrow"><span>1</span><span>15</span><span>30</span></div></div>
+  <div class="card warm"><h3>CALENTAMIENTO SUGERIDO</h3><div>♙ Movilidad de hombros <span>2 min</span></div><div>◌ Círculos de tobillos <span>2 min</span></div><div>◉ Sentadillas sin peso <span>2 × 15</span></div><div>↕ Elevación de brazos <span>2 × 15</span></div><div style="border-top:1px solid #20302a;margin-top:8px;padding-top:9px;color:#aab5b1">Un buen calentamiento previene y mejora tu rendimiento. ✓</div></div>
+  <div class="card bottom"><button class="active">⌂<b>Inicio</b></button><button onclick="selectTab('rutinas')">↔<b>Rutinas</b></button><button onclick="selectTab('registro')">▣<b>Registro</b></button><button onclick="selectTab('cronometro')">◷<b>Cronómetro</b></button><button onclick="selectTab('progreso')">⌁<b>Progreso</b></button></div>
+</aside>
+<main class="main">
+  <nav class="card topnav">
+    <button class="active" onclick="selectTab('rutinas')">♙<b>Rutinas</b>4 días</button>
+    <button onclick="showExercise()">⌁<b>Ilustraciones</b>Inicial → Final</button>
+    <button onclick="selectTab('cronometro')">◷<b>Cronómetro</b>de descanso</button>
+    <button onclick="selectTab('registro')">▦<b>Registro</b>de series</button>
+    <button onclick="selectTab('progreso')">⌁<b>Progreso</b>y estadísticas</button>
+    <button onclick="alert('Hombro izquierdo y tobillo derecho: trabaja sin dolor, con control y estabilidad.')">♧<b>Cuidado</b>hombro y tobillo</button>
+  </nav>
+  <section class="card hero"><span class="back">‹</span><div><small id="crumb">DÍA 1 • PECHO + TRÍCEPS</small><h1 id="exTitle">PRESS DE PECHO EN MÁQUINA <span class="badge">Pectoral mayor</span></h1></div><span class="dots">☆　•••</span></section>
+  <section class="card exercise">
+    <div class="images">
+      <div class="pose"><div class="label">POSICIÓN INICIAL</div><svg viewBox="0 0 500 330">
+        <rect x="80" y="70" width="340" height="190" rx="20" fill="#101d19"/><rect x="105" y="80" width="290" height="20" rx="8" fill="#283932"/>
+        <circle cx="245" cy="105" r="28" fill="#eab07e"/><path d="M245 133 L245 205 M245 150 L170 175 L135 145 M245 150 L320 175 L355 145 M245 205 L205 265 M245 205 L285 265" fill="none" stroke="#e9edf0" stroke-width="18" stroke-linecap="round"/>
+        <path d="M135 145 L118 120 M355 145 L372 120" stroke="#c8d0d0" stroke-width="14" stroke-linecap="round"/>
+        <path d="M105 230 H395" stroke="#5a6a65" stroke-width="12"/><circle cx="92" cy="120" r="16" fill="#4c5c56"/><circle cx="408" cy="120" r="16" fill="#4c5c56"/>
+      </svg></div>
+      <div class="pose final"><div class="label">POSICIÓN FINAL</div><svg viewBox="0 0 500 330">
+        <rect x="80" y="70" width="340" height="190" rx="20" fill="#101d19"/><rect x="105" y="80" width="290" height="20" rx="8" fill="#283932"/>
+        <circle cx="245" cy="105" r="28" fill="#eab07e"/><path d="M245 133 L245 205 M245 150 L170 145 L115 125 M245 150 L320 145 L375 125 M245 205 L205 265 M245 205 L285 265" fill="none" stroke="#e9edf0" stroke-width="18" stroke-linecap="round"/>
+        <path d="M115 125 L95 115 M375 125 L395 115" stroke="#c8d0d0" stroke-width="14" stroke-linecap="round"/>
+        <path d="M105 230 H395" stroke="#5a6a65" stroke-width="12"/>
+      </svg></div>
+    </div>
+    <div class="info-grid">
+      <div class="info"><h3>CÓMO HACERLO</h3><p><span class="check">✓</span>Ajusta el asiento para que las manijas queden a la altura media del pecho.</p><p><span class="check">✓</span>Apoya la espalda completamente en el respaldo.</p><p><span class="check">✓</span>Empuja hacia delante sin bloquear los codos.</p><p><span class="check">✓</span>Regresa lento y controlado.</p></div>
+      <div class="info"><h3>MÚSCULOS TRABAJADOS</h3><div class="muscle"><svg viewBox="0 0 120 160"><path d="M60 8 L45 25 L48 55 L32 70 L20 120 L38 145 L82 145 L100 120 L88 70 L72 55 L75 25Z" fill="#d7dcda"/><path d="M38 55 Q60 42 82 55 L78 78 Q60 90 42 78Z" fill="#e65a3b"/></svg><ul><li>Pectoral mayor</li><li>Pectoral menor</li><li>Tríceps (apoyo)</li></ul></div></div>
+      <div class="info machine"><svg viewBox="0 0 100 120"><rect x="18" y="12" width="64" height="95" rx="8" fill="#24352e"/><rect x="30" y="20" width="40" height="25" rx="4" fill="#5a6d65"/><path d="M50 45 V78 M30 75 H70" stroke="#aab5b1" stroke-width="7"/><circle cx="50" cy="92" r="9" fill="#64df20"/></svg><div><h3>MÁQUINA</h3><p>Press de pecho en máquina (convergente).</p></div></div>
+      <div class="info"><h3>RECOMENDACIONES</h3><ul><li>No rebotes el peso.</li><li>Mantén los hombros hacia atrás y el pecho abierto.</li><li>Evita llevar los codos por debajo del nivel del pecho.</li></ul></div>
+    </div>
+    <div class="metrics"><div class="metric"><b>4</b><small>SERIES</small></div><div class="metric"><b>8–12</b><small>REPETICIONES</small></div><div class="metric"><b>60–90 s</b><small>DESCANSO</small></div><div class="metric"><b>1–2</b><small>RIR</small></div></div>
+    <button class="primary" onclick="startSet()">▶ COMENZAR SERIE</button>
+  </section>
+  <section class="work-grid">
+    <div class="card work timer"><h3>SERIE EN CURSO <span style="float:right;color:#8f9b96">Serie <b id="seriesNum">2</b> de 4</span></h3><div class="ring" id="ring"><div class="inside"><small>DESCANSO</small><b id="time">00:58</b></div></div><div class="controls"><button onclick="toggleTimer()" id="pause">Ⅱ PAUSAR</button><button onclick="resetTimer()">↻ REINICIAR</button></div></div>
+    <div class="card record"><h3>REGISTRO DE SERIE</h3><div class="sets" id="sets"><button>1</button><button class="sel">2</button><button>3</button><button>4</button></div><div class="inputs"><label>Peso (kg)<input id="peso" type="number" placeholder="60"></label><label>Reps<input id="reps" type="number" value="10"></label><label>RIR<input id="rir" type="number" value="2"></label></div><button class="primary" onclick="saveSet()">GUARDAR SERIE</button><button class="primary" style="background:#12221b;color:var(--green);border:1px solid #2b4d31" onclick="completeDay()">✓ MARCAR COMO COMPLETADO</button><div class="info" style="margin-top:9px"><h3>CONSEJOS IMPORTANTES</h3><ul><li>Escucha a tu cuerpo; el dolor no es normal.</li><li>Prioriza la técnica sobre el peso.</li><li>Duerme 7–8 horas diarias.</li><li>Aliméntate bien e hidrátate.</li></ul></div></div>
+  </section>
+  <div class="card footer-note">MI GYM 90 · Objetivo 114 → 90 kg · 4 días · Entrenamiento de fuerza para pérdida de grasa</div>
+</main>
 </div>
-<div class="actions"><button class="action ${done.includes(i)?"done":""}" onclick="toggle(${i})">${done.includes(i)?"✓ Ejercicio completado":"Marcar ejercicio"}</button>${!isCardio?'<button class="action" onclick="start(90)">⏱ 90 s</button>':""}</div>
-<details><summary>Ver guía rápida</summary><div class="details-body">Haz una repetición lenta para comprobar el recorrido. Después mantén un ritmo constante. Si no puedes controlar la bajada o cambia tu postura, reduce el peso.</div></details>`;
-list.appendChild(el);
-});
-document.getElementById("daybar").style.width=(done.length/w.ex.length*100)+"%";
-}
-function toggle(i){const k=keyFor(workouts[day].day);let d=JSON.parse(localStorage.getItem(k)||"[]");d=d.includes(i)?d.filter(x=>x!==i):[...d,i];localStorage.setItem(k,JSON.stringify(d));render()}
-function fmt(s){return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0")}
-function start(s){clearInterval(interval);timer=s;clock.textContent=fmt(timer);interval=setInterval(()=>{timer--;clock.textContent=fmt(timer);if(timer<=0){clearInterval(interval);navigator.vibrate?.(300)}},1000)}
-function resetTimer(){clearInterval(interval);timer=90;clock.textContent=fmt(timer)}
-workouts.forEach((w,i)=>{const b=document.createElement("button");b.className="tab"+(i===0?" active":"");b.textContent=w.day;b.onclick=()=>{day=i;render()};tabs.appendChild(b)});
-if("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("sw.js?v=4",{updateViaCache:"none"});
-render();
+<div class="toast" id="toast">Guardado ✓</div>
+<script>
+const days=[
+ ['DÍA 1','Pecho + Tríceps','🏋️'],['DÍA 2','Espalda + Bíceps','🦾'],['DÍA 3','Piernas (Cuádriceps + Gemelos)','🦵'],['DÍA 4','Hombros + Abdomen','🏃']
+];
+const exercises=[
+ ['PRESS DE PECHO EN MÁQUINA','Pectoral mayor','PECHO + TRÍCEPS'],
+ ['JALÓN AL PECHO','Dorsal ancho','ESPALDA + BÍCEPS'],
+ ['PRENSA DE PIERNAS','Cuádriceps','PIERNAS'],
+ ['PRESS DE HOMBROS EN MÁQUINA','Deltoides','HOMBROS + ABDOMEN']
+];
+let current=0, sec=58, running=true, timer;
+function renderDays(){document.getElementById('dayList').innerHTML=days.map((d,i)=>`<button class="day ${i===current?'active':''}" onclick="changeDay(${i})"><span class="ico">${d[2]}</span><span><b>${d[0]}</b><small>${d[1]}</small></span><span class="arrow">›</span></button>`).join('')}
+function changeDay(i){current=i;renderDays();document.getElementById('crumb').textContent=`${days[i][0]} • ${days[i][1].toUpperCase()}`;document.getElementById('exTitle').innerHTML=`${exercises[i][0]} <span class="badge">${exercises[i][1]}</span>`;toast('Rutina cambiada ✓')}
+function showExercise(){window.scrollTo({top:document.querySelector('.exercise').offsetTop-10,behavior:'smooth'})}
+function selectTab(t){toast(t==='cronometro'?'Cronómetro listo':t==='registro'?'Registro listo':t==='progreso'?'Progreso listo':'Rutinas activas')}
+function toast(msg){let e=document.getElementById('toast');e.textContent=msg;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),1600)}
+function draw(){document.getElementById('time').textContent=`00:${String(sec).padStart(2,'0')}`;let deg=(58-sec)/58*360;document.getElementById('ring').style.background=`conic-gradient(var(--green) ${deg}deg,#17241f ${deg}deg)`}
+function tick(){if(running&&sec>0){sec--;draw()}else if(sec===0){running=false;toast('Descanso terminado 🔔')}}
+function toggleTimer(){running=!running;document.getElementById('pause').textContent=running?'Ⅱ PAUSAR':'▶ CONTINUAR'}
+function resetTimer(){sec=60;running=true;draw();document.getElementById('pause').textContent='Ⅱ PAUSAR'}
+function startSet(){sec=60;running=true;draw();toast('Serie iniciada · 60 s de descanso al terminar')}
+function saveSet(){localStorage.setItem('migym_last',JSON.stringify({peso:document.getElementById('peso').value,reps:document.getElementById('reps').value,rir:document.getElementById('rir').value,date:new Date().toLocaleString()}));toast('Serie guardada ✓')}
+function completeDay(){let n=+(localStorage.getItem('migym_work')||8)+1;localStorage.setItem('migym_work',n);document.getElementById('sWork').textContent=n;toast('Entrenamiento completado 🎉')}
+renderDays();draw();timer=setInterval(tick,1000);
 </script>
-</body></html>
+</body>
+</html>
