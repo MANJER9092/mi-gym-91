@@ -33,7 +33,7 @@ function render(){
  d.exercises.map((e,i)=>`<article class="exercise">
   <div><h2>${i+1}. ${e[0]}</h2><span class="tag">${e[1]}</span><div class="meta">${e[2]} &nbsp;|&nbsp; Descanso: ${e[3]}</div>
   <div class="how">${e[4].map(x=>`<div>${x}</div>`).join("")}</div></div>
-  <div class="photos"><div class="photo"><span>POSICIÓN INICIAL</span></div><div class="photo"><span>POSICIÓN FINAL</span></div></div>
+  <div class="photos"><div class="photo realistic"><span>POSICIÓN INICIAL</span></div><div class="photo realistic final"><span>POSICIÓN FINAL</span></div></div>
   <div class="muscle"><div class="body"></div><b>MÚSCULOS</b><ul><li>${e[1]}</li><li>Estabilizadores</li><li>Apoyo secundario</li></ul></div>
  </article>`).join("");
  document.querySelectorAll(".tab,.daylink").forEach(x=>x.classList.toggle("active",Number(x.dataset.day)===day));

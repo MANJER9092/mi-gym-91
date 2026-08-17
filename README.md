@@ -1,21 +1,27 @@
-# Mi Gym 90 — V6 Realista
-PWA estática para GitHub Pages.
+# Mi Gym 90 — V7 Realista
 
-## Publicar/reemplazar
-1. Descomprime el ZIP.
-2. En el repositorio `mi-gym-91`, abre **Add file → Upload files**.
-3. Selecciona TODOS los archivos de esta carpeta y súbelos a la rama `main`.
-4. Si GitHub pregunta por archivos existentes, confirma el reemplazo.
-5. Pulsa **Commit changes**.
-6. Espera 1–3 minutos y abre tu sitio de GitHub Pages.
+PWA estática en español para GitHub Pages.
 
-## Archivos
-- index.html — estructura de la app.
-- styles.css — diseño oscuro responsive.
-- app.js — rutinas, cronómetro y registro local.
-- manifest.json — instalación como app.
-- sw.js — caché PWA.
-- icon.svg — icono.
+## Incluye
+- 4 días de entrenamiento.
+- 20 ejercicios.
+- Posición inicial → final con visual realista integrada.
+- Técnica y músculos trabajados.
+- Cronómetro de descanso.
+- Registro de peso, repeticiones y RIR.
+- Progreso local con `localStorage`.
+- Diseño oscuro profesional.
+- Manifest + Service Worker para instalación en iPhone.
 
-## Nota sobre las imágenes realistas
-La interfaz está preparada para dos imágenes por ejercicio (Inicial/Final). En esta entrega se usa una representación visual local sin depender de servidores externos, para que GitHub Pages funcione sin problemas. Las fotografías/ilustraciones realistas definitivas pueden incorporarse posteriormente como archivos locales `assets/`.
+## Publicar en GitHub Pages
+1. Descomprime este ZIP.
+2. En tu repositorio `mi-gym-91`, abre **Code**.
+3. Elimina/reemplaza los archivos de la versión anterior por los de esta carpeta.
+4. Haz **Commit changes** en `main`.
+5. En **Settings → Pages**, selecciona **Deploy from a branch**.
+6. Branch: `main`; carpeta: `/(root)`.
+7. Guarda y espera a que GitHub Pages termine el despliegue.
+8. Abre tu URL de Pages y recarga la aplicación.
+
+## Importante
+Esta versión conserva la rutina y funciones de la versión anterior y añade el recurso visual realista dentro del propio repositorio, por lo que no depende de URLs externas.
